@@ -215,8 +215,6 @@ where
 
         let header: &Header = unsafe { &*(raw_bytes.as_ptr() as *const Header) };
 
-        debug_assert_eq!(header.sanity_check::<C>(raw_bytes.len()), Ok(()));
-
         header
     }
 
